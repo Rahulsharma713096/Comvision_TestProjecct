@@ -12,6 +12,7 @@ namespace Comvision_TestProjecct
 {
     public partial class Login : Form
     {
+        int attempt;
         public Login()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace Comvision_TestProjecct
         {
             string id = Email.Text;
             string pwd = password.Text;
-
+            
             if(id=="123"&& pwd=="123")
             {
                 Index i = new Index();
@@ -40,7 +41,32 @@ namespace Comvision_TestProjecct
             {
                 MessageBox.Show("Password or Email is incorrect");
             }
-        }
+
+            /*
+             
+
+                if ((this.Email.Text == "Admin") && (this.password.Text == "admin"))
+                {
+                   attempt = 0;
+                    MessageBox.Show("you are granted with access");
+
+
+                }
+                else if ((attempt == 3) && (attempt > 0))
+                {
+                    MessageBox.Show("You Have Only " + Convert.ToString(attempt) + " Attempt Left To Try");
+                    --attempt;
+                }
+                else
+                {
+                    MessageBox.Show("you are not granted with access");
+                }
+
+        */
+            }
+
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
